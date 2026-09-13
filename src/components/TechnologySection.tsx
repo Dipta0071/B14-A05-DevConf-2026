@@ -23,24 +23,24 @@ function TechnologySection() {
 
   // Add technology to stack
   const addToStack = (technology: Technology) => {
-    const alreadySelected = selectedTechnologies.some(
-      (item) => item.category === technology.category
+  const alreadySelected = selectedTechnologies.some(
+    (item) => item.category === technology.category
+  );
+
+  if (alreadySelected) {
+    toast.warning(
+      `You already selected a ${technology.category} technology.`
     );
+    return;
+  }
 
-    if (alreadySelected) {
-      toast.warning(
-        `You already selected a ${technology.category} technology.`
-      );
-      return;
-    }
+  setSelectedTechnologies((previous) => [
+    ...previous,
+    technology,
+  ]);
 
-    setSelectedTechnologies((previous) => [
-      ...previous,
-      technology,
-    ]);
-
-    toast.success(`${technology.name} added to your stack!`);
-  };
+  toast.success(`${technology.name} added to your stack!`);
+};
 
   // Remove technology
   const removeFromStack = (id: number) => {
