@@ -1,51 +1,57 @@
 function Navbar() {
   return (
     <header className="border-b border-gray-100 bg-white">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-        
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-r from-purple-500 to-pink-500 text-xs font-bold text-white">
-            DS
-          </div>
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-5">
 
-          <h1 className="text-lg font-bold text-gray-900">
-            Dev <span className="text-pink-500">Stack</span>
-          </h1>
-        </div>
+        {/* Logo */}
+        <a
+          href="#"
+          className="text-xl font-extrabold tracking-tight text-gray-950"
+        >
+          Dev<span className="text-pink-500">Stack</span>
+        </a>
 
         {/* Navigation */}
-        <nav className="flex items-center gap-7 text-sm">
-          <a href="#" className="font-medium text-pink-500">
+        <nav className="hidden items-center gap-8 md:flex">
+          <a
+            href="#home"
+            className="text-sm font-medium text-gray-600 transition hover:text-gray-950"
+          >
             Home
           </a>
 
-          <a href="#" className="text-gray-500 hover:text-pink-500">
+          <a
+            href="#technologies"
+            className="text-sm font-medium text-gray-600 transition hover:text-gray-950"
+          >
             Technologies
           </a>
 
-          <a href="#" className="text-gray-500 hover:text-pink-500">
-            Projects
-          </a>
-
-          <a href="#" className="text-gray-500 hover:text-pink-500">
+          <a
+            href="#about"
+            className="text-sm font-medium text-gray-600 transition hover:text-gray-950"
+          >
             About
-          </a>
-
-          <a href="#" className="text-gray-500 hover:text-pink-500">
-            Contact
           </a>
         </nav>
 
-        {/* Authentication */}
-        <div className="flex items-center gap-5">
-          <button className="text-sm text-gray-600 hover:text-gray-900">
-            Sign In
-          </button>
+        {/* Right Side */}
+        <div className="flex items-center gap-3">
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noreferrer"
+            className="hidden text-sm font-medium text-gray-600 transition hover:text-gray-950 sm:block"
+          >
+            GitHub
+          </a>
 
-          <button className="rounded-full bg-pink-500 px-5 py-2 text-sm font-semibold text-white hover:bg-pink-600">
-            Sign Up
-          </button>
+          <a
+            href="#technologies"
+            className="rounded-lg bg-gray-950 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-gray-800"
+          >
+            Get Started
+          </a>
         </div>
 
       </div>

@@ -1,14 +1,17 @@
-import heroImage from "../assets/hero.png";
+import bannerStack from "../assets/banner-stack.png";
 
 function Hero() {
   return (
-    <section className="bg-white">
-      <div className="mx-auto flex min-h-[520px] max-w-[1200px] items-center justify-between px-5">
+    <section
+      id="home"
+      className="bg-white"
+    >
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-10 px-5 py-20 md:py-24">
 
         {/* Left Content */}
         <div className="max-w-[600px]">
 
-          <h1 className="text-5xl font-extrabold leading-tight text-gray-900">
+          <h1 className="text-5xl font-extrabold leading-[1.05] tracking-tight text-slate-900 md:text-6xl">
             Build Your Ideal
             <br />
 
@@ -17,32 +20,38 @@ function Hero() {
             </span>
           </h1>
 
-          <p className="mt-5 max-w-[560px] text-lg leading-7 text-gray-500">
+          <p className="mt-6 max-w-[540px] text-base leading-7 text-slate-500 md:text-lg">
             Explore frontend, backend, database, and tooling options,
-            compare them side by side, and put together the stack that fits
-            your next project.
+            compare them side by side, and put together the stack that
+            fits your next project.
           </p>
 
           {/* Buttons */}
-          <div className="mt-8 flex gap-3">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
 
-            <button className="rounded-md bg-gradient-to-r from-orange-500 to-pink-500 px-5 py-3 text-sm font-semibold text-white">
+            <a
+              href="#technologies"
+              className="rounded-lg bg-gradient-to-r from-orange-500 to-pink-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
+            >
               Explore Technologies
-            </button>
+            </a>
 
-            <button className="rounded-md border border-gray-200 bg-white px-7 py-3 text-sm font-medium text-gray-600">
+            <a
+              href="#about"
+              className="rounded-lg border border-slate-200 bg-white px-7 py-3 text-sm font-medium text-slate-600 transition hover:bg-slate-50"
+            >
               Learn More
-            </button>
+            </a>
 
           </div>
         </div>
 
         {/* Right Image */}
-        <div className="flex justify-center">
+        <div className="hidden md:block md:w-[380px] lg:w-[430px]">
           <img
-            src={heroImage}
-            alt="Development stack illustration"
-            className="w-[400px]"
+            src={bannerStack}
+            alt="Development technology stack"
+            className="w-full object-contain"
           />
         </div>
 
