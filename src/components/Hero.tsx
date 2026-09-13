@@ -1,13 +1,17 @@
+import heroImage from "../assets/hero.png";
+
 function Hero() {
   return (
     <section className="bg-white">
       <div className="mx-auto flex min-h-[520px] max-w-[1200px] items-center justify-between px-5">
-        
+
         {/* Left Content */}
         <div className="max-w-[600px]">
+
           <h1 className="text-5xl font-extrabold leading-tight text-gray-900">
             Build Your Ideal
             <br />
+
             <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
               Development Stack
             </span>
@@ -19,7 +23,9 @@ function Hero() {
             your next project.
           </p>
 
+          {/* Buttons */}
           <div className="mt-8 flex gap-3">
+
             <button className="rounded-md bg-gradient-to-r from-orange-500 to-pink-500 px-5 py-3 text-sm font-semibold text-white">
               Explore Technologies
             </button>
@@ -27,13 +33,14 @@ function Hero() {
             <button className="rounded-md border border-gray-200 bg-white px-7 py-3 text-sm font-medium text-gray-600">
               Learn More
             </button>
+
           </div>
         </div>
 
         {/* Right Image */}
         <div className="flex justify-center">
           <img
-            src="/src/assets/hero.png"
+            src={heroImage}
             alt="Development stack illustration"
             className="w-[400px]"
           />
